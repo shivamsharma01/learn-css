@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-green: #0f0;
+  --bg-color: #27282c;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+a {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-white);
+  color: var(--color-white);
+
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 0.5rem 1.5rem;
+  height: clamp(100px, 150px, 200px);
+  width: clamp(200px, 300px, 500px);
+
+  transition: 0.5s;
+}
+
+a:hover {
+  background-color: var(--color-btn);
+  color: var(--color-btn);
+  box-shadow: 0 0 1.5rem var(--color-btn);
+}
+
+a::before,
+a::after {
+  position: absolute;
+  content: "";
+  inset: 2px;
+  background-color: var(--bg-color);
+}
+
+a span {
+  position: relative;
+  z-index: 1;
+}
+
+a i {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+
+a i::before,
+a i::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 0.5rem;
+  background: var(--bg-color);
+  transition: 0.5s;
+  transform: translateX(-50%) skewX(325deg);
+}
+
+a i::before {
+  top: 0;
+  left: 80%;
+}
+
+a i::after {
+  bottom: 0;
+  left: 20%;
+}
+
+a:hover i::before,
+a:hover i::after {
+  width: 2rem;
+  transform: translateX(-50%) skewX(325deg);
+}
+
+a:hover i::before {
+  left: 20%;
+}
+
+a:hover i::after {
+  left: 80%;
+}
+
+div::before {
+  top: -8px;
+  right: 15px;
+  transform: rotateX(135deg) rotateY(135deg);
+}
+
+div::after {
+  bottom: -8px;
+  left: 15px;
+  transform: rotateX(135deg) rotateY(135deg);
+}
+
+div:hover {
+  transform: scale(1.05);
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+}
+
+div:hover a {
+  color: var(--color-green);
+}
+
+div:hover::before {
+  top: -8px;
+  left: 15px;
+  transform: rotateX(135deg) rotateY(135deg);
+}
+
+div:hover::after {
+  bottom: -8px;
+  left: auto;
+  right: 55px;
+  transform: rotateX(135deg) rotateY(135deg);
+}
