@@ -108,38 +108,3 @@ a:hover i::before {
 a:hover i::after {
   left: 80%;
 }
-
-div::before {
-  top: -8px;
-  right: 15px;
-  transform: rotateX(135deg) rotateY(135deg);
-}
-
-div::after {
-  bottom: -8px;
-  left: 15px;
-  transform: rotateX(135deg) rotateY(135deg);
-}
-
-div:hover {
-  transform: scale(1.05);
-  color: var(--color-green);
-  border: 2px solid var(--color-green);
-}
-
-div:hover a {
-  color: var(--color-green);
-}
-
-div:hover::before {
-  top: -8px;
-  left: 15px;
-  transform: rotateX(135deg) rotateY(135deg);
-}
-
-div:hover::after {
-  bottom: -8px;
-  left: auto;
-  right: 55px;
-  transform: rotateX(135deg) rotateY(135deg);
-}
