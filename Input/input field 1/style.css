@@ -53,7 +53,6 @@ body {
   transition: 0.5s;
 }
 
-/* :is(.input-box input:valid, .input-box input:focus-within) + span { */
 .input-box :is(input:valid, input:focus-within) + span {
   color: var(--color-success-text);
   transform: translateX(10px) translateY(-7px);
