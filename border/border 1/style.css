@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #0c1022;
+  --color-white: #fff;
+  --color-border-1: #00ccff;
+  --color-border-2: #d400d4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.box {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(transparent, transparent,
+    transparent, var(--color-border-1));
+    animation: animate 4s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(transparent, transparent,
+    transparent, var(--color-border-2));
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes animate {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+span {
+    z-index: 1;
+    position: absolute;
+    inset: 5px;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+}
+
+.box h2 { 
+    z-index: 2;
+    color: var(--color-white);
+    font-size: 10em;
+}
