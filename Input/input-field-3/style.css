@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: linear-gradient(45deg, #fead06, #c00def);
+}
+
+body {
+  background: var(--bg-color);
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.container {
+  position: relative;
+  padding: 70px 40px;
+  background: #FFF;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  color: #111;
+  margin-bottom: 45px;
+  line-height: 1em;
+  font-weight: 500;
+  padding-left: 10px;
+  border-left: 5px solid #e91e63;
+}
+
+.container .input-box {
+  position: relative;
+  width: 300px;
+  height: 46px;
+  margin-bottom: 35px;
+}
+
+.container .input-box:last-child {
+  margin-bottom: 0;
+}
+
+.container .input-box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #111;
+  background: transparent;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+}
+
+.container .input-box span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/*
+  requires placeholder = " " (or any non empty text) in input element to work
+  once user enters some information in the 'input', 'span' should not come down and overlap with the user entered text.
+*/
+.container .input-box input:not(:placeholder-shown) ~ span {
+  transform: translateX(-10px) translateY(-32px);
+  font-size: 12px;
+}
+
+.container .input-box input[type="submit"] {
+  background: #2196f3;
+  color: #FFF;
+  border: none;
+  max-width: 120px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.container .input-box input[type="submit"]:hover {
+  background-color: #e91e63;
+}
