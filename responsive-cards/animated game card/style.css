@@ -8,8 +8,6 @@
 :root {
   --clr-dark: rgb(13, 17, 19);
   --clr-light: #fff;
-  --clr-accent: rgb(222, 52, 0);
-  --clr-accent-dark: rgb(163, 38, 0);
   --clr-secondary: rgb(0, 76, 199);
   --br: 0.5em;
   --transition: transform 200ms cubic-bezier(0.21, 1, 0.81, 1);
@@ -111,7 +109,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
 }
 
 .front .name {
