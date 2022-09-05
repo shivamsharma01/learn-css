@@ -7,7 +7,11 @@
 
 :root {
   --bg-color: #000;
+<<<<<<< HEAD
   --color-water: #3fefef;
+=======
+  --color-fingerprint: #3fefef;
+>>>>>>> 6cef9b19bcf18c7deac00d35a081629ebfc0452f
 }
 
 body {
@@ -30,11 +34,19 @@ body {
 
 .content h2:nth-child(1) {
     color: transparent;
+<<<<<<< HEAD
     -webkit-text-stroke: 2px var(--color-water);
 }
 
 .content h2:nth-child(2) {
     color: var(--color-water);
+=======
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+    color: #03a9f4;
+>>>>>>> 6cef9b19bcf18c7deac00d35a081629ebfc0452f
     animation: animate 4s ease-in-out infinite;
 }
 
