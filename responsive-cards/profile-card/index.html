@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../asset/icon/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+    <script>
+        function getTodaysDateMonthAndYear() {
+            const date = new Date();
+            return [date.getDate(), date.getMonth()+1, date.getFullYear()];
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+           const span = document.getElementById('age');
+           const [p_d, p_m, p_y] = [4, 11, 1992];
+           const [c_d, c_m, c_y] = getTodaysDateMonthAndYear();
+           let age = c_y - p_y;
+           if (c_y > p_y) {
+            if (c_m < p_m) {
+                age--;
+            } else if (c_m == p_m) {
+                if (c_d < p_d) {
+                    age--;
+                }
+            }
+           }
+           span.innerText = ''+age;
+        });
+    </script>
+  </head>
+  <body>
+    <article class="card">
+      <div class="card-media">
+        <img src="../../asset/svg/bg-pattern-card.svg" alt="dark cyan background" />
+        <img
+          class="shivam-img"
+          src="../../asset/img/shivam_profile.jpg"
+          alt="Shivam Sharma"
+        />
+      </div>
+
+      <div class="card-content">
+        <header>
+          <h1><strong>Shivam Sharma</strong> <span id="age"></span></h1>
+          <p>India</p>
+        </header>
+
+        <footer>
+          <ul class="card-lists">
+            <li class="card-list">
+              <span class="rating">80K</span>
+              <span class="list-text">Followers</span>
+            </li>
+
+            <li class="card-list">
+              <span class="rating">803K</span>
+              <span class="list-text">Likes</span>
+            </li>
+
+            <li class="card-list">
+              <span class="rating">1.4K</span>
+              <span class="list-text">Photos</span>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+  </body>
+</html>
