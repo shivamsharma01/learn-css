@@ -7,13 +7,15 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    PortfolioComponent
   ],
   imports: [
     FontAwesomeModule,
