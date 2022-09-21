@@ -65,19 +65,5 @@
       }
     }
   }
-  
-  .btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid var(--bg-clr-selected);
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: var(--clr-white);
-    transition: background 0.5s;
-    &:hover {
-      background-color: var(--bg-clr-selected);
-    }
-  }
+
 }
