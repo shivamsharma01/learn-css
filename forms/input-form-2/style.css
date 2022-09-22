@@ -6,18 +6,26 @@
 }
 
 :root {
-  --bg-color: #222;
+  --bg-form-color: #222;
   --color-white: #fff;
   --color-grey: rgba(255, 255, 255, 0.5);
   --color-success-text: #2196f3;
 }
 
 body {
-  background-color: var(--bg-color);
-
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   width: 100%;
+}
 
+form {
+  background-color: var(--bg-form-color);
+  border-radius: 3%;
+  padding: 100px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +83,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #FF1b69, #FF0, #2196F3, #9c27b0,#FF1b69);
+  background: linear-gradient(90deg, #ff1b69, #ff0, #2196f3, #9c27b0, #ff1b69);
   animation: animate 2s linear infinite;
   transition: 0.5s;
 }

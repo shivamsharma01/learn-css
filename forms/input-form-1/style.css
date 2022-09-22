@@ -6,7 +6,8 @@
 }
 
 :root {
-  --bg-color: #1d2b3a;
+  --bg-color: #000;
+  --bg-form-color: #1d2b3a;
   --color-white: #fff;
   --color-grey: rgba(255, 255, 255, 0.25);
   --color-success-text: #00dfc4;
@@ -14,10 +15,18 @@
 
 body {
   background-color: var(--bg-color);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   width: 100%;
+}
 
+form {
+  background-color: var(--bg-form-color);
+  border-radius: 3%;
+  padding: 100px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +43,7 @@ body {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--color-grey);
-  background: var(--bg-color);
+  background: var(--bg-form-color);
   border-radius: 5px;
   outline: none;
   color: var(--color-white);
@@ -58,7 +67,7 @@ body {
   transform: translateX(10px) translateY(-7px);
   font-size: 0.65em;
   padding: 0 10px;
-  background: var(--bg-color);
+  background: var(--bg-form-color);
   border-left: 1px solid var(--color-success-text);
   border-right: 1px solid var(--color-success-text);
   letter-spacing: 0.2em;
@@ -69,8 +78,7 @@ body {
 }
 
 .input-box:nth-child(2) :is(input:valid, input:focus-within) + span {
-  color: var(--bg-color);
+  color: var(--bg-form-color);
   background: var(--color-success-text);
   border-radius: 2px;
 }
-
