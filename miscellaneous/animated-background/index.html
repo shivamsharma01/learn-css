@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Background</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="../../asset/script/anime.min.js" defer></script>
+    <script>
+      function draw() {
+        const container = document.querySelector(".container");
+        const numBlocks = 100;
+        for (let index = 1; index <= numBlocks; index++) {
+          const block = document.createElement("div");
+          block.classList.add("block");
+          container.appendChild(block);
+        }
+        function animateBlocks() {
+          anime({
+            targets: ".block",
+            translateX: () => anime.random(-700, 700),
+            translateY: () => anime.random(-500, 500),
+            scale: () => anime.random(1, 5),
+            easing: "linear",
+            duration: 3000,
+            delay: anime.stagger(10),
+            complete: animateBlocks,
+          });
+        }
+        animateBlocks();
+      }
+      window.onload = draw;
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2><span>My First Video on</span><br />AnimeJs</h2>
+    </div>
+  </body>
+</html>
