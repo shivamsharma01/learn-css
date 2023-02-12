@@ -1,0 +1,31 @@
+display
+    - block
+    - inline
+    - table
+    - position
+    - flex
+    - grid
+
+Flexbox
+    - one directional (items flow in one direction at a time)
+    - Focuses on the sizing, distribution and alignment of elements inside a single parent element.
+    - helps solve layout problems (vertical alignment, column layouts etc) without using hacks like positioning, table, floats, box model etc
+
+Key Terms
+    - Flex Container: single parent element with display: flex property
+    - Flex Items: child elements (Block elememnts go vertically, inline go side to side but flex items depend on Main axis)
+    - Main Axis: Start from far left to the right (Main start to Main end).. flex items are arranged in this axis spanning the Main size.
+    - Cross Axis: Perpendicular to Main axis and helps align items in the main container. Cross start, cross end and cross size similar to main.
+
+
+Flex-Direction
+
+Flex-Wrap
+
+Flex-Flow = Flex-Direction + Flex-Wrap
+
+Justifying Content Along the Main Axis: How items are distributed along the main edge.
+
+Align Item Along the cross Axis: How items are aligned along the cross axis.
+
+Align Content: How wrapped rows/items are placed.

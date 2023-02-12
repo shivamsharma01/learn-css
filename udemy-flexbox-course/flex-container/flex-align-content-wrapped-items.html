@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Align content basics</title>
+    <style>
+      .container,
+      .container-col {
+        display: flex;
+        height: 200px;
+        background-color: red;
+        margin-bottom: 20px;
+        border: 5px solid black;
+        flex-wrap: wrap;
+      }
+      .container-col {
+        flex-direction: column;
+      }
+      .item {
+        background-color: blue;
+        font-size: 16px;
+        padding: 0 120px;
+        width: 250px;
+        border: 1px solid black;
+      }
+      .stretch-container {
+        align-content: stretch;
+      }
+      .flex-start-container {
+        align-content: flex-start;
+      }
+      .flex-end-container {
+        align-content: flex-end;
+      }
+      .center-container {
+        align-content: center;
+      }
+      .space-around-container {
+        align-content: space-around;
+      }
+      .space-between-container {
+        align-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Direction: Row</h2>
+    <p>
+      <strong>Default: stretch</strong>
+    </p>
+    <div class="container stretch-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-start</strong>
+    </p>
+    <div class="container flex-start-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-end</strong>
+    </p>
+    <div class="container flex-end-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>center: flex item is centered on the axis</strong>
+    </p>
+    <div class="container center-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>space-around</strong>
+    </p>
+    <div class="container space-around-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>space-between</strong>
+    </p>
+    <div class="container space-between-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <h2>Direction: Column</h2>
+    <p>
+      <strong>Default: stretch</strong>
+    </p>
+    <div class="container-col">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-start</strong>
+    </p>
+    <div class="container-col flex-start-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-end</strong>
+    </p>
+    <div class="container-col flex-end-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>center</strong>
+    </p>
+    <div class="container-col center-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>space-around</strong>
+    </p>
+    <div class="container-col space-around-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Beatae, aliquam ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>space-between</strong>
+    </p>
+    <div class="container-col space-between-container">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam
+        ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Beatae, aliquam ratione
+      </div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </body>
+</html>

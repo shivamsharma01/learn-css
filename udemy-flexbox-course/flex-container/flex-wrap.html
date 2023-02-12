@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox wrap basics</title>
+    <style>
+      .container {
+        display: flex;
+        height: 200px;
+        background-color: red;
+        margin-bottom: 20px;
+        border: 5px solid black;
+      }
+
+      .row {
+        flex-direction: row;
+      }
+      .row-reverse {
+        flex-direction: row-reverse;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .column-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .no-wrap {
+        flex-wrap: nowrap;
+      }
+      .wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
+      .item {
+        background-color: blue;
+        font-size: 16px;
+        width: 350px;
+        height: 50px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <strong>flex-direction: row, flex-wrap: wrap </strong> wraps the remaining
+      flex items below
+    </p>
+    <div class="container row wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: row, flex-wrap: no-wrap </strong> reduces the flex
+      item size but does not wrap.. it will hide the items if flex item cannot
+      be reduced further
+    </p>
+    <div class="container row no-wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: row, flex-wrap: wrap-reverse</strong>starts from
+      left to right and wraps the remaining flex items above
+    </p>
+    <div class="container row wrap-reverse">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: row-reverse flex-wrap: no-wrap </strong> starts
+      from right and reduces the flex item size but does not wrap.. it will hide
+      the items if flex item cannot be reduced further
+    </p>
+    <div class="container row-reverse no-wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <p>
+      <strong>flex-direction: column, flex-wrap: wrap </strong> wraps the remaining flex items below
+    </p>
+    <div class="container column wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: column, flex-wrap: no-wrap </strong> reduces the flex
+      item size but does not wrap.. it will hide the items if flex item cannot
+      be reduced further
+    </p>
+    <div class="container column no-wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: column, flex-wrap: wrap-reverse</strong>starts from left to right and wraps the remaining flex items above
+    </p>
+    <div class="container column wrap-reverse">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <hr />
+    <p>
+      <strong>flex-direction: column-reverse flex-wrap: no-wrap </strong> starts
+      from right and reduces the flex item size but does not wrap.. it will hide
+      the items if flex item cannot be reduced further
+    </p>
+    <div class="container column-reverse no-wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    </div>
+  </body>
+</html>
