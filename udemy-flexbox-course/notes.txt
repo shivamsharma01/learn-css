@@ -19,13 +19,60 @@ Key Terms
 
 
 Flex-Direction
+The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+
 
 Flex-Wrap
+The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
+
+
 
 Flex-Flow = Flex-Direction + Flex-Wrap
+The flex-flow CSS shorthand property specifies the direction of a flex container, as well as its wrapping behavior.
+
+
 
 Justifying Content Along the Main Axis: How items are distributed along the main edge.
 
+
+
 Align Item Along the cross Axis: How items are aligned along the cross axis.
 
+
+
 Align Content: How wrapped rows/items are placed.
+
+order
+
+flex-grow
+The flex-grow CSS property sets the flex grow factor of a flex item's main size.
+This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
+The default value is 0 meaning do not cover any remaining space.
+
+flex-shrink
+The flex-shrink CSS property sets the flex shrink factor of a flex item. 
+If the size of all flex items is larger than the flex container, items shrink to fit according to flex-shrink.
+The default value is 1.
+value of 0 means don't shrink this item.
+
+
+flex-basis
+The flex-basis CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing.
+flex-bais:0 means collapse the element to its smallest possible width given the content, or to zero itself if its overflow is hidden 
+flex-basis:auto uses the value of the width in horizontal writing mode, and the value of the height in vertical writing mode; when the corresponding value is also auto, the content value is used instead
+
+flex 
+flex = flex-grow | flex-shrink | flex-basis; // 3 parameter
+flex = flex-grow | flex-shrink; // 2 parameter, sets flex-basis to 0%
+flex = flex-grow | flex-basis; // 2 parameter, sets flex-shrink to 1
+flex: initial; // sets flex-grow: 0, flex-shrink: 1 and flex-basis: auto
+flex: none; // sets flex-grow: 0, flex-shrink: 0 and flex-basis: auto 
+flex: auto; // sets flex-grow: 1, flex-shrink: 1 and flex-basis: auto 
+flex: number; // sets flex-grow: number, flex-shrink: 1 and flex-basis: 0%
+flex: px value; // sets flex-grow: 1, flex-shrink: 1 and flex-basis: px value 
+
+
+align-self
+In Grid, it aligns the item inside the grid area. 
+In Flexbox, it aligns the item on the cross axis.
+The align-self CSS property overrides a grid or flex item's align-items value.

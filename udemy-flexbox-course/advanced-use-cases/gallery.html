@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Netflix Video Gallery</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/base.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/gallery.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        padding: 20px 50px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .gallery {
+        margin: 0 15px;
+        border-radius: 10px 10px 0 0;
+        background: #0048aa;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .gallery header {
+        border-radius: 10px 10px 0 0;
+        padding: 15px;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .gallery .gallery-row {
+        position: relative;
+        height: 200px;
+      }
+
+      .gallery .arrows {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+      }
+
+      .gallery .arrow {
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 4rem;
+        color: #fff;
+        background: rgba(0, 72, 170, 0.4);
+      }
+
+      .gallery ul {
+        list-style: none;
+      }
+
+      .gallery img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .gallery .arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .gallery .arrows .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 50px;
+      }
+      .gallery ul {
+        display: flex;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-list">
+      <section class="gallery">
+        <header>Comedy</header>
+        <div class="gallery-row">
+          <div class="arrows">
+            <div class="arrow">&lt;</div>
+            <div class="arrow">&gt;</div>
+          </div>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/argument.png" alt="The Argument" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/cinema.png" alt="Cinema" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/zulu.png" alt="Zulu" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/vr.png" alt="VR" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/movie-strip.png" alt="Movie Strip" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/creepy.png" alt="Creepy" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/potato.png" alt="Potato" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/boxing.png" alt="Boxing" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/gang.png" alt="Gang" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/motorbike.png" alt="Motorbike" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
