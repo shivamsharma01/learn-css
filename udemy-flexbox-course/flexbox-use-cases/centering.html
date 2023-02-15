@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centering items</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+      }
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 500px;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      <em>Center A model and center text inside it</em> both vertically and
+      horizontally
+    </h2>
+    <div class="container">
+      <div class="modal">
+        <p>This is the model text</p>
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

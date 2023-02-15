@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        min-height: 500px;
+        border: 2px solid black;
+      }
+      .side-bar {
+        flex: 0 0 180px;
+        background-color: black;
+        color: white;
+      }
+      .main-content {
+        flex: 1 1 auto;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><em>Create a three column container</em> using flexbox</h2>
+    <div class="container">
+      <div class="side-bar">This is the side bar</div>
+      <div class="main-content">This is the main content</div>
+    </div>
+    <hr />
+  </body>
+</html>

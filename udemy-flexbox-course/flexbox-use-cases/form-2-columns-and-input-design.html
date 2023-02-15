@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - 2 columns and fancy input</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 20px 50px;
+      }
+
+      body {
+        font-size: 1.6rem;
+      }
+
+      .container {
+        background: #fff;
+        border-radius: 5px;
+        margin: 0;
+        height: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      form {
+        width: 600px;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #444;
+      }
+
+      h3 {
+        color: #0048aa;
+        text-align: center;
+        margin-bottom: 0.8rem;
+      }
+
+      .field-row {
+        background: #eee;
+        padding: 8px 10px;
+        border-radius: 2px;
+        margin-bottom: 0.4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .field-row > label {
+        flex: 2 0 40%;
+      }
+
+      input,
+      textarea {
+        padding: 5px 10px;
+        font-size: 1.5rem;
+        border-radius: 3px;
+        border: 1px solid rgba(25, 25, 25, 0.4);
+      }
+
+      .field-row > input,
+      .field-row > textarea,
+      .fancy-field {
+        flex: 3 1 60%;
+      }
+
+      button {
+        padding: 6px;
+        font-size: 1.5rem;
+        background: #246fa8;
+        color: #fff;
+        border: 1px solid #57c1eb;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      .top-align-label > label {
+        align-self: flex-start;
+      }
+
+      .fancy-field > input {
+        border-radius: 0;
+        text-align: right;
+      }
+
+      .fancy-field > .dollar-sign-label,
+      .fancy-field > .full-dollar-label {
+        border-right: 0;
+        padding: 2px 7px;
+        background: #bbb;
+        font-weight: bold;
+        border: 1px solid rgba(25, 25, 25, 0.4);
+      }
+
+      .fancy-field > .dollar-sign-label {
+        border-radius: 2px 0 0 2px;
+        border-right: 0;
+      }
+
+      .fancy-field > .full-dollar-label {
+        border-radius: 0 2px 2px 0;
+        border-left: 0;
+      }
+
+      .fancy-field {
+        display: flex;
+      }
+
+      .fancy-field input {
+        flex: 1 1 auto;
+      }
+
+      .fancy-field .dollar-sign-label,
+      .fancy-field .full-dollar-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="javascript:void(0);">
+        <h3>Register Form</h3>
+        <div class="field-row">
+          <label>Email</label>
+          <input type="text" placeholder="Email" />
+        </div>
+        <div class="field-row">
+          <label>First Name</label>
+          <input type="text" placeholder="First Name" />
+        </div>
+        <div class="field-row">
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="field-row">
+          <label>Deposit</label>
+          <div class="fancy-field">
+            <div class="dollar-sign-label">$</div>
+            <input type="text" />
+            <div class="full-dollar-label">.00</div>
+          </div>
+        </div>
+        <div class="field-row top-align-label">
+          <label>Comment</label>
+          <textarea placeholder="Add Comment Here" rows="7"></textarea>
+        </div>
+
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
