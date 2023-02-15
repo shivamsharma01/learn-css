@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox align-individual-items basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        height: 250px;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        border: 1px solid black;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .stretch {
+        align-self: stretch;
+      }
+      .start {
+        align-self: flex-start;
+      }
+      .end {
+        align-self: flex-end;
+      }
+      .center {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><em>align-self</em></h2>
+    <p><strong>original</strong></p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>1: stretch</strong></p>
+    <p><strong>2: flex-start</strong></p>
+    <p><strong>3: flex-end</strong></p>
+    <p><strong>4: flex-center</strong></p>
+    <div class="container">
+      <div class="item stretch">1</div>
+      <div class="item start">2</div>
+      <div class="item end">3</div>
+      <div class="item center">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox flex property basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        border: 1px solid black;
+        flex-basis: 200px;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .three-parameter .item:nth-of-type(2) {
+        flex: 3 2 70px;
+      }
+      .two-parameter-no-basis .item:nth-of-type(2) {
+        flex: 3 0;
+      }
+      .two-parameter-no-shrink .item:nth-of-type(2) {
+        flex: 3 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><em>flex</em> property</h2>
+    <h3>Property applied on item 2</h3>
+    <p><strong>default</strong></p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+    <p><strong>3 parameter</strong>2 1 70px</p>
+    <div class="container three-parameter">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+    <p><strong>2 parameter</strong>grow:3 shrink:2 sets flex-basis to 0% by default</p>
+    <div class="container two-parameter-no-basis">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+    <p><strong>2 parameter</strong>grow:3 flex-bais:300px sets flex-shrink to 1</p>
+    <div class="container two-parameter-no-shrink">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+  </body>
+</html>

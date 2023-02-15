@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox item grow basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        padding: 40px;
+        border: 1px solid black;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .no-items-grow .item {
+        flex-grow: 0;
+      }
+      .all-items-grow .item {
+        flex-grow: 1;
+      }
+      .first-item-grows .item:nth-of-type(1) {
+        flex-grow: 1;
+      }
+      .multiple-items-grow .item:nth-of-type(2),
+      .multiple-items-grow .item:last-of-type {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <strong>no-items-grow</strong>items only fill as much space as required
+    </p>
+    <div class="container no-items-grow">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>all-items-grow</strong>all items grow to fill the space</p>
+    <div class="container all-items-grow">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>first-item-grows</strong>grow first item</p>
+    <div class="container first-item-grows">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>multiple-items-grow</strong>grow only 2 and 4</p>
+    <div class="container multiple-items-grow">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox flex basis basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        width: 800px;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        border: 1px solid black;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .flex-basis-auto .item {
+        flex-basis: auto;
+      }
+      .flex-basis-fixed-value .item {
+        flex-basis: 70px;
+      }
+      .flex-basis-fluid-value .item {
+        flex-basis: 20%;
+      }
+      .items-can-grow .item {
+        flex-basis: 100px;
+      }
+      .items-can-grow .item:first-of-type {
+        flex-grow: 1;
+      }
+      .items-can-shrink .item {
+        flex-basis: 300px;
+        flex-shrink: 0;
+      }
+      .items-can-shrink .item:first-of-type {
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>
+      If We set Width = 60px; and then change flex-direction from row to column
+      on a mobile device, width would still be 60px. But actually we wanted the
+      flex-item to cover the entire row. Using Flex Basis, helps keep the size
+      on the chosen axis. When flex-direction is row it will keep width as 60
+      but when flex-direction is column it will keep height as 60px.
+    </h3>
+
+    <p>
+      <strong>flex-basis: auto</strong>sets width or height explicitly set by
+      the flex item if any else covers as much space as the space required by
+      the flex item
+    </p>
+    <div class="container flex-basis-auto">
+      <div class="item">1</div>
+      <div class="item" style="width: 75px">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>fixed-> flex-basis: 70px</strong>override any width or height
+      explicitly set by the flex item if any and set each to 75px (width if
+      flex-direction:row or column if flex-direction:column).
+    </p>
+    <div class="container flex-basis-fixed-value">
+      <div class="item">1</div>
+      <div class="item" style="width: 75px">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p>
+      <strong>fluid-> flex-basis: 20%</strong>override any width or height
+      explicitly set by the flex item if any and set each to 20% (width if
+      flex-direction:row or column if flex-direction:column).
+    </p>
+    <div class="container flex-basis-fluid-value">
+      <div class="item">1</div>
+      <div class="item" style="width: 75px">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <h3>flex-basis + (flex-grow/flex-shrink)</h3>
+    <p>
+      <strong>items can grow</strong>total 800px, all set to 100px so only first grew to 600px
+    </p>
+    <div class="container items-can-grow">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+    <p>
+      <strong>items can shrink</strong>total 800px, all set to 300px so only first shrinked to 200px
+    </p>
+    <div class="container items-can-shrink">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

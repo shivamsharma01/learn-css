@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox item ordering basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .container {
+        display: flex;
+        background-color: red;
+        margin-bottom: 20px;
+        border: 5px solid black;
+      }
+
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        padding: 40px;
+        border: 1px solid black;
+      }
+
+      .default-order .item {
+        order: 0;
+      }
+
+      .last-to-first .item:last-of-type {
+        order: -1;
+      }
+      .first-to-last .item:first-of-type {
+        order: 1;
+      }
+      .even-odd .item:nth-child(even) {
+        order: -1;
+      }
+      .third-first-four-second .item:nth-of-type(even) {
+        order: 2;
+      }
+      .third-first-four-second .item:nth-of-type(3) {
+        order: -1;
+      }
+      .third-first-four-second .item:last-of-type {
+        order: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p><strong>default- order: 0</strong></p>
+    <div class="container default-order">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>last-to-first</strong>last item should come at the beginning</p>
+    <div class="container last-to-first">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>first-to-last</strong>first item should come at the end</p>
+    <div class="container first-to-last">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>even-odd</strong>even items before odd items</p>
+    <div class="container even-odd">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+    <hr />
+    <p><strong>third-first-four-second</strong>ordering very specifically</p>
+    <div class="container third-first-four-second">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox container basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .item {
+        background-color: blue;
+        font-size: 40px;
+        border: 1px solid black;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><strong></strong></p>
+    <div class="container default-order">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

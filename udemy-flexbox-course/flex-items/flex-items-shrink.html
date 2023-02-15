@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox shrinks basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        width: 600px;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .item {
+        background-color: blue;
+        width: 200px;
+        font-size: 40px;
+        padding: 40px;
+        border: 1px solid black;
+      }
+      strong {
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .no-shrink .item {
+        flex-shrink: 0;
+      }
+      .all-shrink .item {
+        flex-shrink: 1;
+      }
+      .one-item-shrink .item {
+        flex-shrink: 0;
+      }
+      .one-item-shrink .item:first-of-type {
+        flex-shrink: 1;
+      }
+      .one-two-one-one-container .item:nth-of-type(2) {
+        flex-shrink: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <p><strong>default</strong></p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>all-shrink-> flex-shrink: 1</strong></p>
+    <div class="container all-shrink">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>no-shrink-> flex-shrink: 0</strong></p>
+    <div class="container no-shrink">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>one-item-shrink</strong></p>
+    <div class="container one-item-shrink">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+    <hr />
+    <p><strong>one-two-one-one-container</strong></p>
+    <div class="container one-two-one-one-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+  </div>
+  </body>
+</html>
