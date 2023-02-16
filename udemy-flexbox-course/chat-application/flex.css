@@ -1,0 +1,106 @@
+* {
+  flex: 0 0 0%;
+  flex-flow: row nowrap;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chat-container {
+  flex: 1 1 0%;
+  display: flex;
+}
+
+#chat-window {
+  flex: 1 0 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+#side-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+#conversation-list {
+  flex: 1 0 0%;
+}
+
+#search-container {
+  flex: 0 0 71px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-container input {
+  flex: 0 0 30px;
+}
+
+#new-message-container {
+  flex: 0 0 78px;
+  display: flex;
+  align-items: center;
+}
+
+#new-message-container a {
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat-message-list {
+  flex: 1 0 0%;
+}
+
+#chat-title {
+  flex: 0 0 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chat-title span {
+    flex: 1 0 0%;
+}
+
+.trash-logo {
+  flex: 0 0 36px;
+}
+
+#chat-form {
+    flex: 0 0 78px;
+    display: flex;
+    align-items: center;
+}
+
+#attachment-logo {
+    flex: 0 0 32px;
+}
+
+#chat-form input {
+    flex: 1 0 0%;
+}
+
+.conversation {
+    display: flex;
+}
+
+.conversation-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0%;
+}
+
+.conversation-title {
+    display: flex;
+    flex: 1 0 0%;
+}
+.title-text {
+    flex: 1 0 0%
+}
