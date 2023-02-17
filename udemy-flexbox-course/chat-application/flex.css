@@ -58,6 +58,7 @@ body {
   flex: 1 0 0%;
   display: flex;
   flex-flow: column-reverse nowrap;
+  overflow-y: scroll;
 }
 
 #chat-title {
