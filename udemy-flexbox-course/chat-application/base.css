@@ -95,14 +95,14 @@ html {
 }
 
 .trash-logo {
-  stroke: #0048AA;
+  stroke: #0048aa;
   height: 36px;
 }
 
 #attachment-logo {
   cursor: pointer;
   height: 32px;
-  fill:#0048AA;
+  fill: #0048aa;
   margin-right: 15px;
 }
 
@@ -118,14 +118,14 @@ html {
 .conversation {
   color: #ddd;
   font-size: 1.3rem;
-  border-bottom: 1px solid #002C88;
+  border-bottom: 1px solid #002c88;
   padding: 20px 20px 20px 15px;
   max-width: 300px;
 }
 
 .conversation.active,
 .conversation:hover {
-  background: #002C88;
+  background: #002c88;
 }
 
 .conversation:hover {
@@ -144,10 +144,71 @@ html {
   font-weight: bold;
   margin-right: 10px;
   color: #eee;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .created-date {
   white-space: nowrap;
   color: #ddd;
   font-size: 1rem;
+}
+
+.conversation-details {
+  overflow-x: hidden;
+}
+
+.conversation-message {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#conversation-list {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.message-row {
+  margin-bottom: 20px;
+}
+
+.message-time {
+  font-size: 1.3rem;
+  color: #777;
+}
+
+.message-text {
+  padding: 9px 14px;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.you-message .message-text {
+  background: #0048aa;
+  color: #eee;
+  border: 1px solid #0048aa;
+  border-radius: 14px 14px 0 14px;
+}
+
+.other-message .message-text {
+  background: #eee;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 14px 14px 14px 0;
+}
+
+.user-picture-container {
+  margin-right: 15px;
+  min-width: 48px;
+}
+
+.user-picture-container img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
 }
