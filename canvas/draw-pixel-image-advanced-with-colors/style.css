@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+canvas {
+  border: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 523px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  filter: bllue(2px) contrast(2);
+}
