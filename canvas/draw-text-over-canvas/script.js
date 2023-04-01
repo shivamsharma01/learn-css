@@ -7,7 +7,7 @@ const defaultParticleSize = 3;
 const mouse = {
   x: null,
   y: null,
-  radius: 150,
+  radius: 250,
 };
 
 window.addEventListener("mousemove", function (event) {
@@ -36,7 +36,7 @@ class Particle {
     this.size = defaultParticleSize;
     this.baseX = this.x;
     this.baseY = this.y;
-    this.density = Math.random() * 30 + 1;
+    this.density = Math.random() * 40 + 5;
   }
 
   draw() {
@@ -48,16 +48,41 @@ class Particle {
   }
 
   update() {
-    let dx = mouse.x - this.x;
-    let dy = mouse.y - this.y;
-    let distance = Math.sqrt(dx * dx + dy * dy);
-    if (distance < activeDistance) {
-      this.size = 30;
+    const dx = mouse.x - this.x;
+    const dy = mouse.y - this.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const maxDistance = mouse.radius;
+    if (distance < maxDistance) {
+      const newDirections = getNewDirectionForParticleWithinVacinity(
+        dx,
+        dy,
+        distance
+      );
+      this.x -= newDirections.directionX * this.density;
+      this.y -= newDirections.directionY * this.density;
     } else {
-      this.size = 3;
+      if (this.x !== this.baseX) {
+        const dx = this.x - this.baseX;
+        this.x -= dx / 5;
+      }
+      if (this.y !== this.baseY) {
+        const dy = this.y - this.baseY;
+        this.y -= dy / 5;
+      }
     }
   }
 }
+
+const getNewDirectionForParticleWithinVacinity = (dx, dy, distance) => {
+  const maxDistance = mouse.radius;
+  let force = (maxDistance - distance) / maxDistance;
+  const forceDirectionX = dx / distance;
+  const forceDirectionY = dy / distance;
+  return {
+    directionX: forceDirectionX * force,
+    directionY: forceDirectionY * force,
+  };
+};
 
 const init = (numParticles) => {
   return Array.from(Array(numParticles)).map((_) => {
