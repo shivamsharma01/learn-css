@@ -25,7 +25,6 @@ window.onload = function () {
   ctx.font = "90px Verdana";
   ctx.fillText("A", 0, 30);
   ctx.strokeStyle = "white";
-
   animate(canvas, ctx, init(numParticles));
 };
 
