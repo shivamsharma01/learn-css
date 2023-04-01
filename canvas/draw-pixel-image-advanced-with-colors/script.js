@@ -1,4 +1,4 @@
-import { theMandalorianImageBase64Url } from "../imageData.js";
+import { theMandalorianImageBase64Url } from "../data/imageData.js";
 
 const loadImage = () => {
   const image1 = new Image();

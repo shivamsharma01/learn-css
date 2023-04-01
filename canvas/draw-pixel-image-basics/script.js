@@ -1,4 +1,4 @@
-import { animatedNatureImageBase64Url } from "../imageData.js";
+import { animatedNatureImageBase64Url } from "../data/imageData.js";
 
 window.onload = function () {
   const canvas = document.getElementById("canvas1");

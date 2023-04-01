@@ -1,4 +1,4 @@
-import { cyberPunkImageBase64Url } from "../imageData.js";
+import { cyberPunkImageBase64Url } from "../data/imageData.js";
 
 const loadImage = () => {
   const image1 = new Image();
